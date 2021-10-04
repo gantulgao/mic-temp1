@@ -5,7 +5,7 @@
     <parent>
         <groupId>mn.isolvers.build</groupId>
         <artifactId>parent-build</artifactId>
-        <version>0.0.2</version>
+        <version>0.0.3</version>
     </parent>
 	<groupId>mn.isolvers.temp1.parent</groupId>
 	<artifactId>mic-template1-parent</artifactId>

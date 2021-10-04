@@ -1,7 +1,7 @@
 package mn.isolvers.temp.api.v1.client;
 
+import mn.isolvers.common.model.MResponse;
 import mn.isolvers.temp.api.v1.domain.Clients;
-import mn.isolvers.temp.api.v1.exception.MResponse;
 import mn.isolvers.temp.api.v1.domain.User;
 import mn.isolvers.temp.api.v1.domain.dbInfo;
 import org.springframework.cloud.openfeign.FeignClient;

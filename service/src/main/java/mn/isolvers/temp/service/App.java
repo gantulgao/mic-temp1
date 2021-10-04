@@ -1,13 +1,12 @@
 package mn.isolvers.temp.service;
 
+import mn.isolvers.common.annotation.iSolversMicroservice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication
+@iSolversMicroservice(title = "Temp1 service",desc = "first template service for example")
 public class App extends SpringBootServletInitializer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
