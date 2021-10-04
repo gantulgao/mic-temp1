@@ -1,16 +1,11 @@
 package mn.isolvers.temp.api.v1.domain;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-/**
- * @author gantulga.o
- * @date 2021-10-03
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

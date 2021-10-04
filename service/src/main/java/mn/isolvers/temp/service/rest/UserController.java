@@ -3,6 +3,8 @@ package mn.isolvers.temp.service.rest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.extern.slf4j.Slf4j;
 import mn.isolvers.temp.api.v1.domain.*;
+import mn.isolvers.temp.api.v1.exception.MError;
+import mn.isolvers.temp.api.v1.exception.MResponse;
 import mn.isolvers.temp.service.internal.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/v1.0/users")
 @Slf4j
 public class UserController {
 

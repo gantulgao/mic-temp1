@@ -87,7 +87,6 @@ public class UserService {
 
     public List<Clients> callProc() throws JsonProcessingException {
         log.info("Executing ...");
-        int ret = 0;
 
         SimpleJdbcCall call =new SimpleJdbcCall(jdbcTemplate)
                                 .withProcedureName("_sp_view_capital");
@@ -106,29 +105,6 @@ public class UserService {
         log.info("Return:{}",res.get("return"));
 
         return clients;
-
-//        List<Clients> res = clientRepository.getCol("",ret);
-//
-//        log.info("Ret:{}",ret);
-//
-//        return res;
-
-//        return databaseClient.sql("exec _sp_view_capital @filter, @ret output")
-//                .bind("filter","")
-//                .bind("ret",)
-//               .fetch().all()
-//
-//               .doOnError(e->log.error("Cannot!",e));
-
-//        SimpleJdbcCall call = new SimpleJdbcCall()
-//                                .withProcedureName("_sp_view_capital");
-
-//        SqlParameterSource params = new MapSqlParameterSource()
-//                .addValue("GID","aaa")
-//                .addValue("Account","aaaa")
-//                ;
-
-//        return call.execute();
 
     }
 

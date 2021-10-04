@@ -1,11 +1,10 @@
-package mn.isolvers.temp.api.v1.domain;
+package mn.isolvers.temp.api.v1.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import java.util.HashMap;

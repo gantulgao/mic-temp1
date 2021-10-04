@@ -1,4 +1,4 @@
-package mn.isolvers.temp.api.v1.domain;
+package mn.isolvers.temp.api.v1.exception;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.AllArgsConstructor;

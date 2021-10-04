@@ -21,6 +21,8 @@ eureka:
 
 server:
   port: 2099
+  servlet:
+    context-path: /template
 
 logging:
   level:
