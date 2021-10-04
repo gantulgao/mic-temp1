@@ -1,3 +1,8 @@
 spring:
   application:
     name: template
+  cloud:
+    discovery:
+      enabled: false
+    config:
+      enabled: false

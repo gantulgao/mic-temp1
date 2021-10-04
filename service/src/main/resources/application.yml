@@ -6,11 +6,6 @@ spring:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     show-sql: true
-  cloud:
-    discovery:
-      enabled: false
-    config:
-      enabled: false
 
 eureka:
   client:

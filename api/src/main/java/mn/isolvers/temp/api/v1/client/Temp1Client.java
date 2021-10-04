@@ -31,5 +31,4 @@ public interface Temp1Client {
     @GetMapping("/v1.0/users/collateral")
     MResponse<List<Clients>> fetColl();
 
-
 }
