@@ -14,7 +14,7 @@ public class App extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
-        LOGGER.warn(" ~~~~~ mbank-sample-main-service started! ~~~~~ ");
+        LOGGER.warn(" ~~~~~ temp1 service started! ~~~~~ ");
     }
 
 }
