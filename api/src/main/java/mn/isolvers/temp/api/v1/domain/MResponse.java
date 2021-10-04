@@ -3,6 +3,7 @@ package mn.isolvers.temp.api.v1.domain;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.exception.ExceptionUtils;
@@ -12,20 +13,23 @@ import java.util.Map;
 
 @SuppressWarnings("unused")
 @Data
+@Builder
 @AllArgsConstructor
-@NoArgsConstructor(staticName = "of")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class MResponse<T> {
     private String code = "200";
     private String message = "Амжилттай";
     @JsonProperty("data")
     private T body;
-    @JsonProperty("additionalProperties")
+    @JsonProperty("additional")
     private Map<String,Object> addj;
 
     public MResponse(String code, String message){
         this.code = code;
         this.message = message;
+    }
+
+    public MResponse() {
     }
 
     public MResponse<T> error(Throwable err){
@@ -59,5 +63,6 @@ public class MResponse<T> {
         this.addj = addj;
         return this;
     }
+
 
 }

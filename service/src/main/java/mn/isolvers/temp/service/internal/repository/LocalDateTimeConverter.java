@@ -1,4 +1,4 @@
-package mn.isolvers.temp.service.internal.model;
+package mn.isolvers.temp.service.internal.repository;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

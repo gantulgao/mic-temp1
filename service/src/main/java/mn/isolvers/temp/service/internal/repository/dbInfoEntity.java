@@ -1,4 +1,4 @@
-package mn.isolvers.temp.service.internal.model;
+package mn.isolvers.temp.service.internal.repository;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,16 +9,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
 
-/**
- * @author gantulga.o
- * @date 2021-09-28
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "dbInfo")
-public class dbInfo {
+public class dbInfoEntity {
 
     @Id
     private Integer Ccode;
@@ -43,6 +39,6 @@ public class dbInfo {
     private String LFOCUS;
     private String RESERVED;
 
-//    private LocalDateTime REM;
+    private byte[] REM;
 
 }

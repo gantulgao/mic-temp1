@@ -1,12 +1,12 @@
 package mn.isolvers.temp.service.internal.repository;
 
-import mn.isolvers.temp.service.internal.model.User;
+import mn.isolvers.temp.api.v1.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.Optional;
 
-public interface UserRepository extends JpaRepository<User,Integer> {
+public interface UserRepository extends JpaRepository<UserEntity,Integer> {
 
     @Query(value = "select * from users where age >= $1",nativeQuery = true)
     Optional<User> findByAge(int age);

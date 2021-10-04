@@ -6,26 +6,26 @@ import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import mn.isolvers.temp.service.internal.model.Clients;
-import mn.isolvers.temp.service.internal.model.Department;
-import mn.isolvers.temp.service.internal.model.User;
-import mn.isolvers.temp.service.internal.model.dbInfo;
-import mn.isolvers.temp.service.internal.repository.DepartmentRepository;
-import mn.isolvers.temp.service.internal.repository.InfoRepository;
-import mn.isolvers.temp.service.internal.repository.UserRepository;
+import mn.isolvers.temp.api.v1.domain.Clients;
+import mn.isolvers.temp.api.v1.domain.Department;
+import mn.isolvers.temp.api.v1.domain.User;
+import mn.isolvers.temp.api.v1.domain.dbInfo;
+import mn.isolvers.temp.api.v1.exception.ServiceException;
+import mn.isolvers.temp.service.internal.mapper.UserMapper;
+import mn.isolvers.temp.service.internal.mapper.dbInfoMapper;
+import mn.isolvers.temp.service.internal.repository.*;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
-@Transactional
 @RequiredArgsConstructor
 public class UserService {
 
@@ -34,36 +34,43 @@ public class UserService {
     private final InfoRepository infoRepository;
 
     public User createUser(User user){
-        return userRepository.save(user);
+        return UserMapper.map(userRepository.save(UserMapper.map(user)))
+
+                ;
     }
 
-    public Iterable<User> getAllUsers(){
-        return userRepository.findAll();
+    public List<User> getAllUsers(){
+        return userRepository.findAll()
+                .stream()
+                .map(UserMapper::map)
+                .collect(Collectors.toList());
     }
 
-    public Iterable<dbInfo> getAllInfo(){
-        return infoRepository.findAll();
+    public List<dbInfo> getAllInfo(){
+        return infoRepository.findAll()
+                .stream().map(dbInfoMapper::map).collect(Collectors.toList());
     }
 
     public User findById(Integer userId){
-        return //userRepository.findById(userId)
+        return
                 userRepository.getUser(userId)
                 ;
     }
 
-    public User updateUser(Integer userId, User user){
+    public Optional<User> updateUser(Integer userId, User user){
         log.info("In updateUser ...");
-
         return userRepository.findById(userId)
-               .orElse(new User());
+                .map(UserMapper::map);
 
     }
 
     public void deleteUser(Integer userId){
-        userRepository.findById(userId)
-                .ifPresent(user->userRepository.delete(user))
 
-                ;
+       final UserEntity user = userRepository.findById(userId)
+                .orElseThrow(()-> ServiceException.notFound("User not found!"));
+
+        userRepository.delete(user);
+
     }
 
     public User findUsersByAge(int age){
