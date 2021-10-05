@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/v1.0/optype")
+@RequestMapping("/optype")
 @RequiredArgsConstructor
 public class OpTypeController {
 

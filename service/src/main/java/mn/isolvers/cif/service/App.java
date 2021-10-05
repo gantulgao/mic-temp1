@@ -6,14 +6,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-@iSolversMicroservice(title = "Temp1 service",desc = "first template service for example")
+@iSolversMicroservice(title = "Customer service",desc = "NBFI Customer, CustType and Operation API's")
 public class App extends SpringBootServletInitializer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
-        LOGGER.warn(" ~~~~~ temp1 service started! ~~~~~ ");
+        LOGGER.warn(" ~~~~~ cif service started! ~~~~~ ");
     }
 
 }

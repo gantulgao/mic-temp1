@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/v1.0/cif")
+@RequestMapping("/cif")
 @RequiredArgsConstructor
 public class CustController {
 
@@ -40,9 +40,26 @@ public class CustController {
 
     }
 
+    @GetMapping("/byreg")
+    public MResponse<CustomerType> getCustByReg(@RequestParam String creg){
+        log.api("In getCustByReg ...");
+
+        final Optional<Customer> cust = custService.findByReg(creg);
+        if (cust.isPresent()) {
+            return new MResponse().body(cust.get());
+        }
+        else {
+            return new MResponse().stat(MError.of("404", EventConstants.NOT_FOUND_CIF));
+        }
+
+    }
+
     @PostMapping
-    public MResponse saveCustomer(@RequestBody Customer customer){
-        return new MResponse().body(custService.update(customer));
+    public MResponse updateCustomer(@RequestBody Customer customer){
+        if (customer.getCcode() != null)
+          return new MResponse().body(custService.update(customer));
+        else
+          return custService.saveCustomer(customer);
     }
 
     @DeleteMapping("/{ccode}")

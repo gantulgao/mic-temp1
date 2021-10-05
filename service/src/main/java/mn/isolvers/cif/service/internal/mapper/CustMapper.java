@@ -22,7 +22,7 @@ public final class CustMapper {
       entity.setCreg(domain.getCreg());
       entity.setCtype(domain.getCtype());
       entity.setCucode(domain.getCucode());
-      entity.setRem(domain.getRem());
+//      entity.setRem(domain.getRem());
       return entity;
    }
 
@@ -41,7 +41,7 @@ public final class CustMapper {
        entity.setCreg(domain.getCreg());
        entity.setCtype(domain.getCtype());
        entity.setCucode(domain.getCucode());
-       entity.setRem(domain.getRem());
+//       entity.setRem(domain.getRem());
       return entity;
    }
 

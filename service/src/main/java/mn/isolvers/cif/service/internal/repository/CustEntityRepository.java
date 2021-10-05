@@ -14,6 +14,6 @@ public interface CustEntityRepository extends JpaRepository<CustomerEntity, Inte
     @Query(value = "select max(ccode) from client where ccode > 10000",nativeQuery = true)
     Optional<Integer> getMaxCust();
 
-    Optional<Customer> findByCreg(String Creg);
+    Optional<CustomerEntity> findByCreg(String creg);
 
 }

@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 public class Customer {
 
-    private int Ccode;
+    private Integer Ccode;
     private String Cfname;
     private String Cname;
     private String Creg;
@@ -26,6 +26,6 @@ public class Customer {
     private String Cemail;
     private LocalDateTime Cdate;
     private String Cucode;
-    private byte[] Rem;
+//    private byte[] Rem;
 
 }

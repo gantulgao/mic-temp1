@@ -1,11 +1,14 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=loan
+    url: jdbc:sqlserver://localhost:1433;databaseName=gbank
     username: sa
     password: P@ssw0rd
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
 eureka:
   client:
@@ -15,9 +18,11 @@ eureka:
     homePageUrl: "http://${eureka.hostname}:2099/template/" # update port, replace 'template'
 
 server:
-  port: 2099
+  port: 2011
   servlet:
-    context-path: /template
+    context-path: /customer/v1.0
+
+
 
 logging:
   level:

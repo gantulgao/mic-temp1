@@ -1,9 +1,7 @@
 package mn.isolvers.cif.service.internal.mapper;
 
 import mn.isolvers.cif.api.v1.domain.CustomerType;
-import mn.isolvers.cif.api.v1.domain.User;
 import mn.isolvers.cif.service.internal.repository.CustomerTypeEntity;
-import mn.isolvers.cif.service.internal.repository.UserEntity;
 
 public final class CustTypeMapper {
 

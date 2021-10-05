@@ -3,21 +3,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>mn.isolvers.temp1.parent</groupId>
-        <artifactId>mic-template1-parent</artifactId>
+        <groupId>mn.isolvers.cif.parent</groupId>
+        <artifactId>mic-cif-parent</artifactId>
         <version>1.0</version>
+        <relativePath/>
     </parent>
-    <groupId>mn.isolvers.temp1.service</groupId>
+    <groupId>mn.isolvers.cif.service</groupId>
     <artifactId>service</artifactId>
     <version>0.0.1</version>
-    <name>temp1-service</name>
+    <name>cif-service</name>
     <packaging>war</packaging>
-    <description>iSolver Template service</description>
+    <description>iSolver Customer service</description>
 
     <dependencies>
 
         <dependency>
-            <groupId>mn.isolvers.temp1.api</groupId>
+            <groupId>mn.isolvers.cif.api</groupId>
             <artifactId>api</artifactId>
             <version>0.0.1</version>
         </dependency>

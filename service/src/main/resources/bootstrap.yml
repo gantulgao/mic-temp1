@@ -1,6 +1,7 @@
 spring:
   application:
-    name: template
+    name: customere
+    version: 1.0
   cloud:
     discovery:
       enabled: false

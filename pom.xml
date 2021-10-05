@@ -7,8 +7,8 @@
         <artifactId>parent-build</artifactId>
         <version>0.0.3</version>
     </parent>
-	<groupId>mn.isolvers.temp1.parent</groupId>
-	<artifactId>mic-template1-parent</artifactId>
+	<groupId>mn.isolvers.cif.parent</groupId>
+	<artifactId>mic-cif-parent</artifactId>
 	<packaging>pom</packaging>
     <version>1.0</version>
 

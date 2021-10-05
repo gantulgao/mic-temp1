@@ -2,6 +2,7 @@ package mn.isolvers.cif.service.internal.repository;
 
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -13,19 +14,33 @@ import java.time.LocalDateTime;
 public class CustomerEntity {
 
     @Id
-    private int Ccode;
-    private String Cfname;
-    private String Cname;
-    private String Creg;
-    private String Cpass;
-    private String Ctype;
-    private String Cfocus;
-    private String Caddress;
-    private String Cphone;
-    private String  Cfax;
-    private String Cemail;
-    private LocalDateTime Cdate;
-    private String Cucode;
-    private byte[] Rem;
+    @Column(name = "Ccode")
+    private int ccode;
+    @Column(name = "Cfname")
+    private String cfname;
+    @Column(name = "Cname")
+    private String cname;
+    @Column(name = "Creg")
+    private String creg;
+    @Column(name = "Cpass")
+    private String cpass;
+    @Column(name = "Ctype")
+    private String ctype;
+    @Column(name = "Cfocus")
+    private String cfocus;
+    @Column(name = "Caddress")
+    private String caddress;
+    @Column(name = "Cphone")
+    private String cphone;
+    @Column(name = "Cfax")
+    private String cfax;
+    @Column(name = "Cemail")
+    private String cemail;
+    @Column(name = "Cdate")
+    private LocalDateTime cdate;
+    @Column(name = "Cucode")
+    private String cucode;
+//    @Column(name = "Rem")
+//    private byte[] rem;
 
 }

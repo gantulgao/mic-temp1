@@ -7,13 +7,12 @@
         <artifactId>parent-build</artifactId>
         <version>0.0.3</version>
     </parent>
-    <groupId>mn.isolvers.temp1.api</groupId>
+    <groupId>mn.isolvers.cif.api</groupId>
     <artifactId>api</artifactId>
     <version>0.0.1</version>
-    <name>temp1-api</name>
+    <name>cif-api</name>
     <packaging>jar</packaging>
-    <description>iSolver Template  service api</description>
-
+    <description>iSolver Customemr service api</description>
 
 
 </project>
