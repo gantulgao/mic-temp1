@@ -14,13 +14,4 @@
     <packaging>jar</packaging>
     <description>iSolver Customemr service api</description>
 
-
-    <repositories>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/gantulgao/*</url>
-        </repository>
-    </repositories>
-
 </project>

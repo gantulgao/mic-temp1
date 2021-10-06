@@ -1,6 +1,6 @@
 spring:
   application:
-    name: customere
+    name: customer-service
     version: 1.0
   cloud:
     discovery:
