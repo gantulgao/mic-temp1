@@ -5,7 +5,7 @@
     <parent>
         <groupId>mn.isolvers.build</groupId>
         <artifactId>parent-build</artifactId>
-        <version>0.0.3</version>
+        <version>0.0.4</version>
     </parent>
 	<groupId>mn.isolvers.cif.parent</groupId>
 	<artifactId>mic-cif-parent</artifactId>
@@ -17,6 +17,13 @@
         <module>service</module>
     </modules>
 
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/gantulgao/*</url>
+        </repository>
+    </repositories>
 
 	
 </project>

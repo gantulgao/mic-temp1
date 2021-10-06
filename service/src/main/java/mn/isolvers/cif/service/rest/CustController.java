@@ -55,7 +55,7 @@ public class CustController {
     }
 
     @PostMapping
-    public MResponse updateCustomer(@RequestBody Customer customer){
+    public MResponse saveCustomer(@RequestBody Customer customer){
         if (customer.getCcode() != null)
           return new MResponse().body(custService.update(customer));
         else

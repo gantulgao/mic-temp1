@@ -14,14 +14,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-  instance:
-    homePageUrl: "http://${eureka.hostname}:2099/template/" # update port, replace 'template'
 
 server:
   port: 2011
   servlet:
-    context-path: /customer/v1.0
-
+    context-path: /customer/v${spring.application.version}
 
 
 logging:
