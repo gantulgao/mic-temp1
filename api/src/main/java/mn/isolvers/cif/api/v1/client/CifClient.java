@@ -2,6 +2,7 @@ package mn.isolvers.cif.api.v1.client;
 
 import mn.isolvers.cif.api.v1.domain.Customer;
 import mn.isolvers.cif.api.v1.domain.CustomerType;
+import mn.isolvers.cif.api.v1.domain.OperationType;
 import mn.isolvers.common.model.MResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
@@ -38,6 +39,18 @@ public interface CifClient {
 
     @DeleteMapping("/ciftype/{ctype}")
     MResponse deleteCustTyp(@PathVariable String ctype);
+
+    @GetMapping("/optype")
+    List<OperationType> getAllOpType();
+
+    @GetMapping("/optype/{ftype}")
+    MResponse<CustomerType> getOpType(@PathVariable String ftype);
+
+    @PostMapping("/optype")
+    MResponse saveOpType(@RequestBody OperationType operationType);
+
+    @DeleteMapping("/optype/{ftype}")
+    MResponse deleteOpTyp(@PathVariable String ftype);
 
 
 }

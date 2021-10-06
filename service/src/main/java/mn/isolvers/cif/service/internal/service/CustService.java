@@ -68,6 +68,10 @@ public class CustService {
     public MResponse<Customer> saveCustomer(Customer cust){
         log.api("In saveCustomer ...");
 
+        if ( custRepository.findByCreg(cust.getCreg()).isPresent() ){
+            return new MResponse().stat(MError.of("404",EventConstants.REGISTER_CONFLICT));
+        }
+
         final int ccode;
         if (cust.getCfocus().equals("02")) {
             Optional<Integer> orgCode = custRepository.getMaxOrig();

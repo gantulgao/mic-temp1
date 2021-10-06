@@ -8,10 +8,10 @@ import java.util.Optional;
 
 public interface CustEntityRepository extends JpaRepository<CustomerEntity, Integer> {
 
-    @Query(value = "select max(ccode) from client where ccode < 10000",nativeQuery = true)
+    @Query(value = "select max(Ccode) from client where Ccode < 10000",nativeQuery = true)
     Optional<Integer> getMaxOrig();
 
-    @Query(value = "select max(ccode) from client where ccode > 10000",nativeQuery = true)
+    @Query(value = "select max(Ccode) from client where Ccode > 10000",nativeQuery = true)
     Optional<Integer> getMaxCust();
 
     Optional<CustomerEntity> findByCreg(String creg);
